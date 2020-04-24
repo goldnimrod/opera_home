@@ -1,5 +1,0 @@
-TODO documentation
-TODO cleanup code
-TODO write main
-TODO handle EXIT_FAILURE returns from func
-TODO format printout

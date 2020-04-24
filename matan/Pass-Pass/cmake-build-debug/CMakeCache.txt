@@ -130,7 +130,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Pass_Pass
+CMAKE_PROJECT_NAME:STATIC=pass_pass_2
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -194,17 +194,17 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
-//Value Computed by CMake
-Pass_Pass_BINARY_DIR:STATIC=/home/matt/Projects/Opera/opera_home/matan/Pass-Pass/cmake-build-debug
-
-//Value Computed by CMake
-Pass_Pass_SOURCE_DIR:STATIC=/home/matt/Projects/Opera/opera_home/matan/Pass-Pass
-
 //Path to a program.
 ProcessorCount_cmd_nproc:FILEPATH=/usr/bin/nproc
 
 //Path to a program.
 ProcessorCount_cmd_sysctl:FILEPATH=/usr/sbin/sysctl
+
+//Value Computed by CMake
+pass_pass_2_BINARY_DIR:STATIC=/home/matt/Projects/Opera/opera_home/matan/Pass-Pass/cmake-build-debug
+
+//Value Computed by CMake
+pass_pass_2_SOURCE_DIR:STATIC=/home/matt/Projects/Opera/opera_home/matan/Pass-Pass
 
 
 ########################

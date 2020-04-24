@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/matt/Projects/Opera/opera_home/matan/Pass-Pass/cmake-bu
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/matt/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -77,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/home/matt/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.6668.126/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Pass_Pass
+# Target rules for targets named pass-pass
 
 # Build rule for target.
-Pass_Pass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Pass_Pass
-.PHONY : Pass_Pass
+pass-pass: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pass-pass
+.PHONY : pass-pass
 
 # fast build rule for target.
-Pass_Pass/fast:
-	$(MAKE) -f CMakeFiles/Pass_Pass.dir/build.make CMakeFiles/Pass_Pass.dir/build
-.PHONY : Pass_Pass/fast
+pass-pass/fast:
+	$(MAKE) -f CMakeFiles/pass-pass.dir/build.make CMakeFiles/pass-pass.dir/build
+.PHONY : pass-pass/fast
 
 main.o: main.c.o
 
@@ -129,7 +129,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/Pass_Pass.dir/build.make CMakeFiles/Pass_Pass.dir/main.c.o
+	$(MAKE) -f CMakeFiles/pass-pass.dir/build.make CMakeFiles/pass-pass.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -138,7 +138,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/Pass_Pass.dir/build.make CMakeFiles/Pass_Pass.dir/main.c.i
+	$(MAKE) -f CMakeFiles/pass-pass.dir/build.make CMakeFiles/pass-pass.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -147,7 +147,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/Pass_Pass.dir/build.make CMakeFiles/Pass_Pass.dir/main.c.s
+	$(MAKE) -f CMakeFiles/pass-pass.dir/build.make CMakeFiles/pass-pass.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -156,9 +156,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Pass_Pass"
+	@echo "... edit_cache"
+	@echo "... pass-pass"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
