@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/matt/Projects/Opera/opera_home/matan/Pass-Pass/main.c
+main.h
+/home/matt/Projects/Opera/opera_home/matan/Pass-Pass/main.h
+
+/home/matt/Projects/Opera/opera_home/matan/Pass-Pass/main.h
+ctype.h
+-
+dirent.h
+-
+fcntl.h
+-
+libgen.h
+-
+stdio.h
+-
+stdlib.h
+-
+sys/types.h
+-
+sys/ioctl.h
+-
+unistd.h
+-
+limits.h
+-
+string.h
+-
+errno.h
+-
+

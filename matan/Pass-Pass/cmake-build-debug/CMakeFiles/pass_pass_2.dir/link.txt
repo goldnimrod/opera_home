@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/pass_pass_2.dir/main.c.o  -o pass_pass_2 
