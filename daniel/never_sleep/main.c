@@ -9,15 +9,19 @@
 extern int errno;
 
 void main() {
-    int sleepFd = inotify_init();
     struct inotify_event event;
-    int watch_value = inotify_add_watch(sleepFd, SLEEP_PATH, IN_OPEN);
+    int sleep_fd = inotify_init();
+    if (sleep_fd == -1) {
+        perror("error with trying to init the inotify object- ");
+        exit(errno);
+    }
+    int watch_value = inotify_add_watch(sleep_fd, SLEEP_PATH, IN_OPEN);
     if (watch_value == -1) {
         perror("error while trying to open file - ");
         exit(errno);
     }
     while (1) {
-        read(sleepFd, (void *) &event, sizeof(struct inotify_event));
+        read(sleep_fd, (void *) &event, sizeof(struct inotify_event));
         printf("Wake up sunshine!\n");
     }
 }
