@@ -5,11 +5,11 @@
 #include "never_sleep.h"
 
 
-int isSleep(pid_t pid) {
+int is_sleep(pid_t pid) {
     char name[MAX_PROC_NAME];
-    char statFileName[MAX_PROC_PATH_NAME];
-    sprintf(statFileName, STAT_PATH_STRING, pid);
-    FILE *statFile = fopen(statFileName, "r");
+    char stat_file_name[MAX_PROC_PATH_NAME];
+    sprintf(stat_file_name, STAT_PATH_STRING, pid);
+    FILE *statFile = fopen(stat_file_name, "r");
     if (statFile != NULL) {
         fscanf(statFile, "%*s %s", name);
     }
@@ -31,14 +31,17 @@ int main() {
         if (directory) {
             file = readdir(directory);
             while (file != NULL) {
-                if (atoi(file->d_name)) {
-                    pid = atoi(file->d_name);
-                    if (isSleep(pid)) {
+                pid = atoi(file->d_name);
+                if (pid) {
+                    if (is_sleep(pid)) {
                         printf("Wake up honey!!!\n");
                     }
                 }
                 file = readdir(directory);
             }
+        } else {
+            perror("couldn't open /proc dir.");
+            exit(errno);
         }
         closedir(directory);
     }
